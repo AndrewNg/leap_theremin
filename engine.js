@@ -36,7 +36,7 @@ function drawCircle( center, radius, color ) {
   );
   ctx.closePath();
 
-  if ( radius < 1 ) {
+  if ( radius < 40 ) {
     ctx.fillStyle = color;
     ctx.fill();
   } else {
