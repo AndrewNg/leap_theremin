@@ -1,3 +1,17 @@
+$(document).ready(function() {
+  window.setTimeout("showTitle();", 500); // show after page load
+  window.setTimeout("fadeTitle();", 3000); //call fade in 3 seconds
+});
+
+function showTitle() {
+  $("h1").fadeIn('slow');
+}
+
+function fadeTitle() {
+ $("h1").fadeOut('slow');
+}
+
+
 // Get the canvas element from the HTML document
 var canvas = document.getElementById( 'canvas' );
 // Get the canvas context to draw with
@@ -5,13 +19,13 @@ var ctx = canvas.getContext( '2d' );
 
 // Get the canvas width and height for scaling
 var width  = canvas.width,
-    height = canvas.height;
+height = canvas.height;
 
 // Name some basic colors for easy styling
 var white = "#FFF"
 var black1 = "#000000", black2 = "#171717", black3 = "#2E2E2E",
-    black4 = "#454545", black5 = "#5C5C5C", black6 = "#707070",
-    black7 = "#828282", black8 = "#999999";
+black4 = "#454545", black5 = "#5C5C5C", black6 = "#707070",
+black7 = "#828282", black8 = "#999999";
 var colors = [black1, black2, black3, black4, black5, black6];
 
 // Setting styles for canvas stroke and fill
@@ -33,7 +47,7 @@ function drawCircle( center, radius, color ) {
     radius,    // radius
     0,          // starting angle
     2 * Math.PI // ending angle
-  );
+    );
   ctx.closePath();
 
   if ( radius < 40 ) {
